@@ -1,0 +1,231 @@
+:root {
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--LightGrayishBlue);
+    font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 700;
+    font-size: 1em !important;
+    line-height: 1.5;
+    margin: 0em 0em 1em 0em !important;
+}
+
+p {
+    line-height: 1.5;
+    color: var(--GrayishBlue);
+    font-size: 0.8em;
+    margin-bottom: 2.5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+
+    background-color: hsl(210, 46%, 95%);
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.card-text {
+    padding: 2em;
+    background-color: white;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+#drawer_img {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    max-width: 100%;
+}
+
+.card-text-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--VeryDarkGrayishBlue); 
+    margin-bottom: -15px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contact_details {
+    margin-left: 1.2em;
+}
+
+.contact_details span {
+    font-size: 13px;
+    color: var(--GrayishBlue);
+}
+
+.contact_details h2 {
+    font-size: 13px;
+    margin: 0;
+}
+
+#avatar {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+
+/* share button */
+.shareBtn {
+    width: 2em;
+    height: 2em;
+    background-color: var(--LightGrayishBlue);
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+}
+
+#shareBtn img {
+    width: 1em;
+}
+
+
+#shareBtn_dropdown.show {
+    display: block;
+}
+
+#shareBtn_dropdown_low_res {
+    background-color: var(--VeryDarkGrayishBlue);
+    position: absolute;
+    bottom: -18px;
+    width: 350px;
+    left: -32px;
+    height: 77px;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    display: none;
+}
+
+
+.shareBtn_dropdown_low_res_contents {
+    color: var(--GrayishBlue);
+    letter-spacing: 0.3em;
+    list-style: none;
+    display: flex;
+}
+
+.shareBtn_dropdown_low_res_contents li {
+    margin-left: 17px;
+    margin-top: 5px;;
+}
+
+.shareBtn_low_res {
+    margin-left: 40px;
+    background-color: var(--DesaturatedDarkBlue) !important;
+    display: block;
+}
+
+.shareBtn_low_res img {
+    
+}
+
+#shareBtn_dropdown_low_res.show {
+    display: none;
+}
+
+
+/* dropdown bar elements  */
+#shareBtn_dropdown li {
+    display: inline;
+    color: var(--GrayishBlue);
+    letter-spacing: 0.3em;
+    padding: 5px;
+}
+
+#shareBtn_dropdown li img {
+    margin-top: 5px;
+}
+
+
+/* larger resolutions */
+@media (min-width: 768px) {
+
+    .container {
+        flex-direction: row;
+        width: 700px;
+    }
+
+    .card-text {
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 0;
+        position: relative;
+    }
+
+    #drawer_img {
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+        border-top-right-radius: 0em;
+        object-fit: cover;
+        width: 1000px;
+        height: 284px;
+    }
+
+
+/* the dropdown arrow */
+    #shareBtn_dropdown {
+        background-color: var(--VeryDarkGrayishBlue);
+        width: 270px;
+        list-style: none;
+        text-align: center;
+        padding: 0.8em 0em;
+        border-radius: 0.7em;
+        position: absolute;
+        bottom: 70px;
+        left:191px;
+        display: none;
+    } 
+    
+
+    
+    /* the dropdown arrow */
+    #shareBtn_dropdown:after {
+        content: " ";
+        position: absolute;
+        right: 115px;
+        bottom: -12px;
+        border-top: 15px solid var(--VeryDarkGrayishBlue);
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-bottom: none;
+    }
+    
+    #shareBtn_dropdown li {
+        display: inline;
+        color: var(--GrayishBlue);
+        letter-spacing: 0.3em;
+        padding: 5px;
+    }
+    
+    #shareBtn_dropdown li img {
+        margin-top: 5px;
+    }
+    
+
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+    </style>
+  <title>Frontend Mentor | Article preview component</title>
+
+</head>
+<body>
+<main>
+  <div class="container">
+    <div class="card-image">
+      <img id="drawer_img" src="images/drawers.jpg">
+    </div>
+    <div class="card-text">
+      <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+      <p>Ever been in a room and felt like something was missing?
+        Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
+      </p>
+<div id="shareBtn_dropdown">
+      <ul>
+        <li>SHARE</li>
+        <li><img src="images/icon-facebook.svg"></li>
+        <li><img src="images/icon-twitter.svg"></li>
+        <li><img src="images/icon-pinterest.svg"></li>
+      </ul>
+    </div>
+
+  <!-- author name and date -->
+      <div class="card-text-author">
+        <div class="contact" id="contact_tab">
+        <img id="avatar" src="images/avatar-michelle.jpg">
+        <div class="contact_details">
+        <h2>Michelle Appleton</h2>
+        <span>28 Jun 2020</span>
+        </div>
+<!-- low resolution share dropdown -->
+        <ul id="shareBtn_dropdown_low_res">
+          <div class="shareBtn_dropdown_low_res_contents">
+          <li>SHARE</li>
+          <li><img src="images/icon-facebook.svg"></li>
+          <li><img src="images/icon-twitter.svg"></li>
+          <li><img src="images/icon-pinterest.svg"></li>
+          <!-- share button -->
+            <button id="shareBtn_LowRes" class="shareBtn" style="margin-left:50px"><img src="images/icon-share.svg"></button>
+          </div>
+          </ul>
+        
+        </div>
+<!-- share button -->
+        <ul>
+        <button id="shareBtn" class="shareBtn"><img src="images/icon-share.svg"></button>
+        </ul>
+        </div>
+        
+
+      </div>
+
+    </div> 
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
